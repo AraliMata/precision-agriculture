@@ -10,12 +10,15 @@ from MiHilo import *
 
 # cc = self.params['m'] * self.t + self.n. cambiando la t cada vez.
 
-def graficar(xR, yR):
-  x = np.array(xR)
-  y = np.array(yR)
-
+def graficar(x, y):
+  # x = np.array(x)
+  # y = np.array(y)
   plt.plot(x, y)
 
+def graficarB(x,y,w,b):
+  plt.bar(x, height=y, width=w,align='edge',bottom=b,color='#ECDEFF')
+  # plt.bar(x, height=y, width=w,align='edge',color='black')
+  
 
 params = {
   'pendienteCurvaConsumo': -0.5,
@@ -63,7 +66,7 @@ params5 = {
 }
 
 periodoMedicion = 100
-nHilos = 3
+nHilos = 2
 parametros = [params, params2, params3, params4, params5]
 hilos = []
 
@@ -79,6 +82,7 @@ for idxHilo in range(nHilos):
 
 for idxHilo in range(nHilos):
   graficar(hilos[idxHilo].x, hilos[idxHilo].y)
+  graficarB(hilos[idxHilo].xb, hilos[idxHilo].yb,hilos[idxHilo].w,hilos[idxHilo].bottom)
 
 
 dt = 0.5
@@ -91,6 +95,6 @@ plt.plot(allTime, uiLine)
 plt.plot(allTime, usLine)
 
 path = 'Graficas/'
-name = '3 hilos 100 nuevo'
+name = 'Bar'
 
 plt.savefig(path + name)
