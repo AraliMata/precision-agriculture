@@ -21,7 +21,7 @@ def graficarB(x,y,w,b):
   
 
 params = {
-  'pendienteCurvaConsumo': -0.5,
+  'pendienteCurvaConsumo': -0.25,
   'pendienteCurvaRiego': 0.8,
   'umbralSuperior':3.5,
   'umbralInferior':0.5,
@@ -30,7 +30,7 @@ params = {
 }
 
 params2 = {
-  'pendienteCurvaConsumo': -0.4,
+  'pendienteCurvaConsumo': -0.2,
   'pendienteCurvaRiego': 0.8,
   'umbralSuperior':3.5,
   'umbralInferior':0.5,
@@ -44,20 +44,20 @@ params3 = {
   'umbralSuperior':3.5,
   'umbralInferior':0.5,
   'dt':0.5,
-  'humedadInicial': 3.5
+  'humedadInicial': 3
 }
 
 params4 = {
-  'pendienteCurvaConsumo': -0.3,
+  'pendienteCurvaConsumo': -0.15,
   'pendienteCurvaRiego': 0.8,
   'umbralSuperior':3.5,
   'umbralInferior':0.5,
   'dt':0.5,
-  'humedadInicial': 3.5
+  'humedadInicial': 4
 }
 
 params5 = {
-  'pendienteCurvaConsumo': -0.3,
+  'pendienteCurvaConsumo': -0.2,
   'pendienteCurvaRiego': 0.8,
   'umbralSuperior':3.5,
   'umbralInferior':0.5,
@@ -66,7 +66,7 @@ params5 = {
 }
 
 periodoMedicion = 100
-nHilos = 2
+nHilos = 4
 parametros = [params, params2, params3, params4, params5]
 hilos = []
 
